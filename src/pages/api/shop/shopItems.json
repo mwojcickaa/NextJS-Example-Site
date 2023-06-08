@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "Kmin rzymski",
+        "description": "Niezwykły aromat doskonale dopełnia smak i zapach dań mięsnych i wegetariańskich",
+        "price": 49.99,
+        "quantityAvailable": 11,
+        "preview": "/shop/CuminSeeds.png"
+    },
+    {
+        "id": 2,
+        "title": "Kolendra siewna",
+        "description": "Kolendra jest przyprawą mającą bardzo szerokie zastosowanie kulinarne",
+        "price": 33.65,
+        "quantityAvailable": 3,
+        "preview": "/shop/CorianderSeeds.png"
+    },
+    {
+        "id": 3,
+        "title": "Koper włoski",
+        "description": "Popularna przyprawa szczególnie w Indiach i basenie Morza Śródziemnego",
+        "price": 23.45,
+        "quantityAvailable": 5,
+        "preview": "/shop/FenneSeeds.png"
+    },
+    {
+        "id": 4,
+        "title": "Koper ogrodowy",
+        "description": "Nasiona nadają się doskonale jako dodatek do ciast, deserów, sałatek, serów czy mięs",
+        "price": 39.89,
+        "quantityAvailable": 0,
+        "preview": "/shop/DillSeeds.png"
+    },
+    {
+        "id": 5,
+        "title": "Kozieradka pospolita",
+        "description": "Ziarna kozieradki podczas mielenia uwydatniają niesamowity smak i aromat",
+        "price": 14.89,
+        "quantityAvailable": 2,
+        "preview": "/shop/FenugreekSeeds.png"
+    },
+    {
+        "id": 6,
+        "title": "Gorczyca brązowa",
+        "description": "Po zmieleniu będzie stanowić składnik curry. Zamarynowana okaże się piękną ozdobą potrawy",
+        "price": 37.19,
+        "quantityAvailable": 4,
+        "preview": "/shop/MustardSeeds.png"
+    },
+    {
+        "id": 7,
+        "title": "Sezam indyjski",
+        "description": "Ziarenka sezamu, nazywane także kunżutem, to powszechny i wszechstronny dodatek w kuchni",
+        "price": 29.99,
+        "quantityAvailable": 30,
+        "preview": "/shop/SesameSeeds.png"
+    }
+]
