@@ -50,39 +50,52 @@ export default function ShopItemCard(props: ShopItemCardProps) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <>
-                    <FormControl variant="filled">
-                        <Select
-                            className={style.select}
-                            disableUnderline
-                            value={quantity}
-                            onChange={e => setQuantity(e.target.value)}
-                            label="Age"
+                {
+                    props.quantityAvailable == 0
+                        ?
+                        <Typography
+                            gutterBottom
+                            variant="body1"
+                            color="text.secondary"
+                            className={style.sold_out}
                         >
-                            <ListSubheader>Kg</ListSubheader>
-                            {
-                                [...Array(5)].map((_, i) => {
-                                    let disabled = props.quantityAvailable >= i + 1 ? false : true
-                                    return (
-                                        <MenuItem
-                                            key={`select-item-${i + 1}`}
-                                            disabled={disabled}
-                                            value={i + 1}
-                                        >
-                                            {i + 1}
-                                        </MenuItem>
-                                    )
-                                })
-                            }
-                        </Select>
-                    </FormControl>
-                    <Button
-                        onClick={handleOnClick}
-                        size="medium"
-                    >
-                        Dodaj
-                    </Button>
-                </>
+                            Chwilowo wyprzedane
+                        </Typography>
+                        :
+                        <>
+                            <FormControl variant="filled">
+                                <Select
+                                    className={style.select}
+                                    disableUnderline
+                                    value={quantity}
+                                    onChange={e => setQuantity(e.target.value)}
+                                    label="Age"
+                                >
+                                    <ListSubheader>Kg</ListSubheader>
+                                    {
+                                        [...Array(5)].map((_, i) => {
+                                            let disabled = props.quantityAvailable >= i + 1 ? false : true
+                                            return (
+                                                <MenuItem
+                                                    key={`select-item-${i + 1}`}
+                                                    disabled={disabled}
+                                                    value={i + 1}
+                                                >
+                                                    {i + 1}
+                                                </MenuItem>
+                                            )
+                                        })
+                                    }
+                                </Select>
+                            </FormControl>
+                            <Button
+                                onClick={handleOnClick}
+                                size="medium"
+                            >
+                                Dodaj
+                            </Button>
+                        </>
+                }
             </CardActions>
         </Card >
     )

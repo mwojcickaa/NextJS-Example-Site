@@ -1,8 +1,8 @@
 type ShopItem = {
-    id: string
+    id: number
     title: string
     description: string
-    price: string
-    quantityAvailable: string
+    price: number
+    quantityAvailable: number
     preview: string
 }
