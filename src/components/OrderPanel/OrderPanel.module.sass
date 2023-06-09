@@ -1,0 +1,68 @@
+@import "@/styles/variables"
+
+.grid
+    width: 30%
+    height: max-content
+    margin-top: 57px
+    letter-spacing: 1px
+
+    & .tittle
+        border: 1px solid rgba($border-shadow-color, 0.1)
+        margin: 0
+        padding: 20px 30px
+        background-color: $main-color
+        font-weight: 900
+        font-size: 15px
+        color: rgba($border-shadow-color, 0.85)
+        letter-spacing: 1px
+
+    & .description
+        padding: 20px 30px
+        border: 1px solid rgba($border-shadow-color, 0.1)
+        background-color: $main-color
+        color: rgba($border-shadow-color, 0.8)
+        font-size: 15px
+
+        & .quantity
+            display: flex
+            justify-content: space-between
+            margin-bottom: 15px
+
+        & .shipment
+            display: flex
+            justify-content: space-between
+            margin-bottom: 15px
+
+        & .code
+            color: $complement-color
+            cursor: pointer
+            display: flex
+            align-items: center
+            gap: 5px
+
+            svg
+                font-size: 16px
+                height: 100%
+
+    & .total
+        border: 1px solid rgba($border-shadow-color, 0.1)
+        margin: 0
+        padding: 20px 30px
+        font-size: 15px
+        background-color: $complement-color
+        color: rgba($border-shadow-color, 0.85)
+        font-weight: 900
+        display: flex
+        justify-content: space-between
+
+    button
+        width: 100%
+        margin-top: 20px
+        padding: 17px 0
+        background-color: $main-color
+        color: white
+        border: 1px solid rgba($border-shadow-color, 0.1)
+        border-top: 0
+        font-weight: 200
+        font-size: 17px
+        letter-spacing: 1px

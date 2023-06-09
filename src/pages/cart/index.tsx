@@ -1,6 +1,7 @@
 import Header from "@/components/Header/Header"
 import { Box, Typography } from "@mui/material"
 import CartTable from "@/components/CartTable/CartTable"
+import OrderPanel from "@/components/OrderPanel/OrderPanel"
 import style from './index.module.sass'
 
 export default function Cart() {
@@ -16,6 +17,7 @@ export default function Cart() {
                 </Typography>
                 <Box className={style.order_panel}>
                     <CartTable />
+                    <OrderPanel />
                 </Box>
             </main>
         </>
