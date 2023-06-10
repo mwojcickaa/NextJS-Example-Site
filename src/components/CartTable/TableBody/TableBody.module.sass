@@ -37,3 +37,21 @@
             span
                 font-weight: 500
                 font-size: 12px
+
+@media (max-width: 717px)
+    .row
+        &.left
+            .description
+                text-align: left
+            .product
+                gap: 0px
+                img
+                    display: none
+
+@media (max-width: 576px)
+    .row
+        font-size: 12px
+
+        svg
+            font-size: 20px
+            margin-top: 4px
