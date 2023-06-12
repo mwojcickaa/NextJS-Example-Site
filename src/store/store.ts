@@ -1,13 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { persistStore } from 'redux-persist'
 import { persistShopCartReducer, persistShopItemsReducer } from './persist'
-import shopCartReducer from '@/reducers/shopCartReducer'
-import shopItemsReducer from '@/reducers/shopItemsReducer'
 
 export const store = configureStore({
     reducer: {
-        shopCart: shopCartReducer,
-        shopItems: shopItemsReducer
+        shopCart: persistShopCartReducer,
+        shopItems: persistShopItemsReducer
     },
     middleware: []
 })
