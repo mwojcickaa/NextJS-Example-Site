@@ -1,10 +1,12 @@
-import React, { useContext } from "react"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCartOutlined'
 import { Box } from "@mui/material"
+import { useStoreSelector } from '@/hooks/useStore'
+import { countQuantityInShopCartItems } from './CartWithNumber.function.ts'
 import style from './CartWithNumber.module.sass'
 
 export default function CartWithNumber() {
-    const counter = 1
+    const countQuantity = useStoreSelector((state) =>
+        countQuantityInShopCartItems(state.shopCart))
 
     return (
         <Box className={style.box}>
@@ -12,7 +14,7 @@ export default function CartWithNumber() {
                 fontSize="large"
                 className={style.icon} />
             <Box className={style.counter}>
-                {counter}
+                {countQuantity}
             </Box>
         </Box>
     )

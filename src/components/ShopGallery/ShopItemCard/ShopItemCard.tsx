@@ -9,13 +9,23 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
+import { useStoreDispatch, useStoreSelector } from '@/hooks/useStore'
+import { add } from '@/reducers/shopCartReducer'
+import { getSelectedItem, getDefaultQuantity } from "./ShopItemCard.funtion"
 import style from "./ShopItemCard.module.sass"
 
+
 export default function ShopItemCard(props: ShopItemCardProps) {
-    const [quantity, setQuantity] = useState("1")
+    const selectedShopCart = useStoreSelector(e => getSelectedItem(e.shopCart, props.id))
+    const [quantity, setQuantity] = useState(() => getDefaultQuantity(selectedShopCart))
+    const dispatch = useStoreDispatch()
 
     const handleOnClick = () => {
-        console.log("click")
+        const payload = {
+            id: props.id,
+            quantity: quantity
+        }
+        dispatch(add(payload))
     }
 
     return (
@@ -68,13 +78,13 @@ export default function ShopItemCard(props: ShopItemCardProps) {
                                     className={style.select}
                                     disableUnderline
                                     value={quantity}
-                                    onChange={e => setQuantity(e.target.value)}
-                                    label="Age"
+                                    onChange={e => setQuantity(Number(e.target.value))}
+                                    label="quantity"
                                 >
                                     <ListSubheader>Kg</ListSubheader>
                                     {
                                         [...Array(5)].map((_, i) => {
-                                            let disabled = props.quantityAvailable >= i + 1 ? false : true
+                                            let disabled = props.quantityAvailable > i + 1 ? false : true
                                             return (
                                                 <MenuItem
                                                     key={`select-item-${i + 1}`}
@@ -91,6 +101,7 @@ export default function ShopItemCard(props: ShopItemCardProps) {
                             <Button
                                 onClick={handleOnClick}
                                 size="medium"
+                                disabled={selectedShopCart?.quantity == quantity}
                             >
                                 Dodaj
                             </Button>

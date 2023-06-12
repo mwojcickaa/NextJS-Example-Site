@@ -3,30 +3,12 @@ import { default as MuiTableBody } from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
 import TableRow from '@mui/material/TableRow'
 import CancelIcon from '@mui/icons-material/Cancel'
-import Image from '@/components/Image/Image'
-import style from './TableBody.module.sass'
 import { Box } from '@mui/material'
-
-
-function createData(
-    id: number,
-    title: string,
-    price: number,
-    quantity: number,
-    carbs: number,
-    protein: number,
-) {
-    return { id, title, price, quantity, carbs, protein };
-}
-
-const rows = [
-    createData(1, 'Kolendra siewna', 159, 6.0, 24, 4.0),
-    createData(2, 'Koper włoski', 237, 9.0, 37, 4.3),
-    createData(3, 'Kolendra siewna', 262, 16.0, 24, 6.0),
-    createData(4, 'Kolendra siewna', 305, 3.7, 67, 4.3),
-    createData(5, 'Koper włoski', 356, 16.0, 49, 3.9),
-];
-
+import Image from '@/components/Image/Image'
+import { useStoreDispatch, useStoreSelector } from '@/hooks/useStore'
+import { remove } from '@/reducers/shopCartReducer'
+import { getRowsData } from './TableBody.function.ts'
+import style from './TableBody.module.sass'
 
 const CustomTableCell = ({ text }: CustomTableCellProps) => {
     return <TableCell className={style.row}>
@@ -34,12 +16,16 @@ const CustomTableCell = ({ text }: CustomTableCellProps) => {
     </TableCell>
 }
 
-const cancelIconOnClick = () => {
-    console.log("click")
-}
-
-
 export default function TableBody() {
+    const dispatch = useStoreDispatch()
+    const cartItems = useStoreSelector((state) => state.shopCart)
+    const shopItems = useStoreSelector((state) => state.shopItems)
+    const rows = getRowsData(cartItems, shopItems)
+
+    const handleOnClick = (id: number) => {
+        dispatch(remove(id))
+    }
+
     return (
         <MuiTableBody>
             {rows.map((row) => (
@@ -62,7 +48,8 @@ export default function TableBody() {
                     <CustomTableCell text={`${row.price * row.quantity} zł`} />
                     <TableCell className={`${style.row}`}>
                         <CancelIcon
-                            onClick={() => cancelIconOnClick()} />
+                            onClick={() => handleOnClick(row.id)}
+                        />
                     </TableCell>
                 </TableRow>
             ))}

@@ -1,25 +1,31 @@
+import { Provider } from "react-redux"
+import { PersistGate } from "redux-persist/integration/react"
+import { store, persistor } from '@/store/store'
 import Header from "@/components/Header/Header"
 import { Box, Typography } from "@mui/material"
 import CartTable from "@/components/CartTable/CartTable"
 import OrderPanel from "@/components/OrderPanel/OrderPanel"
 import style from './index.module.sass'
 
+
 export default function Cart() {
     return (
-        <>
-            <Header />
-            <main>
-                <Typography
-                    variant="h1"
-                    className={style.order_title}
-                >
-                    Twój koszyk
-                </Typography>
-                <Box className={style.order_panel}>
-                    <CartTable />
-                    <OrderPanel />
-                </Box>
-            </main>
-        </>
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <Header />
+                <main>
+                    <Typography
+                        variant="h1"
+                        className={style.order_title}
+                    >
+                        Twój koszyk
+                    </Typography>
+                    <Box className={style.order_panel}>
+                        <CartTable />
+                        <OrderPanel />
+                    </Box>
+                </main>
+            </PersistGate>
+        </Provider>
     )
 }
