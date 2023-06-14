@@ -16,3 +16,14 @@ export const compareCartItemsWithShopItems = (cartItems: ShopCartItemsState, sho
 
 export const getSelectedItem = (shopCartItems: ShopCartItemsState, id: number) =>
     shopCartItems.selected.find(e => e.id == id)
+
+export const getFullPrice = (cartItems: ShopCartItemsState, shopItems: ShopItemsState) => {
+    const items = compareCartItemsWithShopItems(cartItems, shopItems)
+    let price = 0
+
+    items.map(item => {
+        price += item.price * item.quantity
+    })
+
+    return price
+}

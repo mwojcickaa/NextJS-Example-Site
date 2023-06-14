@@ -5,6 +5,7 @@ import CancelIcon from '@mui/icons-material/Cancel'
 import { Box } from '@mui/material'
 import Image from '@/components/Image/Image'
 import style from './TableBody.module.sass'
+import { normalizePrice } from "@/functions/price"
 
 const CustomTableCell = ({ text }: CustomTableCellProps) => {
     return <TableCell className={style.row}>
@@ -17,31 +18,36 @@ export default function TableBody(props: TableBodyProps) {
 
     return (
         <MuiTableBody>
-            {rows.map((row) => (
-                <TableRow
-                    key={row.id}
-                >
-                    <TableCell className={`${style.row} ${style.left}`}>
-                        <Box className={style.product}>
-                            <Image
-                                src={row.preview}
-                                alt={row.title} />
-                            <Box className={style.description}>
-                                {row.title}
-                                <span>1 kg</span>
+            {rows.map((row) => {
+                const normalizedPrice = normalizePrice(row.price)
+                const normalizedFullPrice = normalizePrice(row.price * row.quantity)
+
+                return (
+                    <TableRow
+                        key={row.id}
+                    >
+                        <TableCell className={`${style.row} ${style.left}`}>
+                            <Box className={style.product}>
+                                <Image
+                                    src={row.preview}
+                                    alt={row.title} />
+                                <Box className={style.description}>
+                                    {row.title}
+                                    <span>1 kg</span>
+                                </Box>
                             </Box>
-                        </Box>
-                    </TableCell>
-                    <CustomTableCell text={`${row.price} zł`} />
-                    <CustomTableCell text={row.quantity} />
-                    <CustomTableCell text={`${row.price * row.quantity} zł`} />
-                    <TableCell className={`${style.row}`}>
-                        <CancelIcon
-                            onClick={() => handleOnClick(row.id)}
-                        />
-                    </TableCell>
-                </TableRow>
-            ))}
+                        </TableCell>
+                        <CustomTableCell text={`${normalizedPrice} zł`} />
+                        <CustomTableCell text={row.quantity} />
+                        <CustomTableCell text={`${normalizedFullPrice} zł`} />
+                        <TableCell className={`${style.row}`}>
+                            <CancelIcon
+                                onClick={() => handleOnClick(row.id)}
+                            />
+                        </TableCell>
+                    </TableRow>
+                )
+            })}
         </MuiTableBody>
     )
 }
