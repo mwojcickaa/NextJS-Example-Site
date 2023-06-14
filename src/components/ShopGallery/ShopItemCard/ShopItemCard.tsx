@@ -1,22 +1,18 @@
 import React, { useState } from "react"
-import Select from '@mui/material/Select'
-import MenuItem from '@mui/material/MenuItem'
-import ListSubheader from '@mui/material/ListSubheader'
-import FormControl from '@mui/material/FormControl'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
-import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import { useStoreDispatch, useStoreSelector } from '@/hooks/useStore'
 import { add } from '@/reducers/shopCartReducer'
-import { getSelectedItem, getDefaultQuantity } from "./ShopItemCard.funtion"
 import style from "./ShopItemCard.module.sass"
+import CardActionItems from "./CardActionItems/CardActionItems"
+import { getSelectedItem } from "@/selectors/shopCartSelector"
 
 
 export default function ShopItemCard(props: ShopItemCardProps) {
-    const selectedShopCart = useStoreSelector(e => getSelectedItem(e.shopCart, props.id))
+    const selectedShopCart = useStoreSelector(e => getSelectedItem(e.cartItems, props.id))
     const [quantity, setQuantity] = useState(() => getDefaultQuantity(selectedShopCart))
     const dispatch = useStoreDispatch()
 
@@ -72,43 +68,18 @@ export default function ShopItemCard(props: ShopItemCardProps) {
                             Chwilowo wyprzedane
                         </Typography>
                         :
-                        <>
-                            <FormControl variant="filled">
-                                <Select
-                                    className={style.select}
-                                    disableUnderline
-                                    value={quantity}
-                                    onChange={e => setQuantity(Number(e.target.value))}
-                                    label="quantity"
-                                >
-                                    <ListSubheader>Kg</ListSubheader>
-                                    {
-                                        [...Array(5)].map((_, i) => {
-                                            let disabled = props.quantityAvailable > i + 1 ? false : true
-                                            return (
-                                                <MenuItem
-                                                    key={`select-item-${i + 1}`}
-                                                    disabled={disabled}
-                                                    value={i + 1}
-                                                >
-                                                    {i + 1}
-                                                </MenuItem>
-                                            )
-                                        })
-                                    }
-                                </Select>
-                            </FormControl>
-                            <Button
-                                onClick={handleOnClick}
-                                size="medium"
-                                disabled={selectedShopCart?.quantity == quantity}
-                            >
-                                Dodaj
-                            </Button>
-                        </>
+                        <CardActionItems
+                            quantity={quantity}
+                            quantityAvailable={props.quantityAvailable}
+                            disableButton={selectedShopCart?.quantity == quantity}
+                            setQuantity={setQuantity}
+                            handleOnClick={handleOnClick}
+                        />
                 }
             </CardActions>
         </Card >
     )
 }
 
+const getDefaultQuantity = (shopCartItems: ShopCartItem | undefined) =>
+    shopCartItems?.quantity || 1

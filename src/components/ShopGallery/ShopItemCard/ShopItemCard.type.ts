@@ -4,5 +4,5 @@ type ShopItemCardProps = {
     description: string
     price: number
     quantityAvailable: number
-    preview: any
+    preview: string
 }

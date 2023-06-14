@@ -4,7 +4,7 @@ import { persistShopCartReducer, persistShopItemsReducer } from './persist'
 
 export const store = configureStore({
     reducer: {
-        shopCart: persistShopCartReducer,
+        cartItems: persistShopCartReducer,
         shopItems: persistShopItemsReducer
     },
     middleware: []

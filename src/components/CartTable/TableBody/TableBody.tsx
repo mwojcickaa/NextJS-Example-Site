@@ -1,13 +1,9 @@
-import React from 'react'
 import { default as MuiTableBody } from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
 import TableRow from '@mui/material/TableRow'
 import CancelIcon from '@mui/icons-material/Cancel'
 import { Box } from '@mui/material'
 import Image from '@/components/Image/Image'
-import { useStoreDispatch, useStoreSelector } from '@/hooks/useStore'
-import { remove } from '@/reducers/shopCartReducer'
-import { getRowsData } from './TableBody.function.ts'
 import style from './TableBody.module.sass'
 
 const CustomTableCell = ({ text }: CustomTableCellProps) => {
@@ -16,15 +12,8 @@ const CustomTableCell = ({ text }: CustomTableCellProps) => {
     </TableCell>
 }
 
-export default function TableBody() {
-    const dispatch = useStoreDispatch()
-    const cartItems = useStoreSelector((state) => state.shopCart)
-    const shopItems = useStoreSelector((state) => state.shopItems)
-    const rows = getRowsData(cartItems, shopItems)
-
-    const handleOnClick = (id: number) => {
-        dispatch(remove(id))
-    }
+export default function TableBody(props: TableBodyProps) {
+    const { rows, handleOnClick } = props
 
     return (
         <MuiTableBody>
@@ -35,8 +24,8 @@ export default function TableBody() {
                     <TableCell className={`${style.row} ${style.left}`}>
                         <Box className={style.product}>
                             <Image
-                                src="/shop/FenneSeeds.png"
-                                alt="test" />
+                                src={row.preview}
+                                alt={row.title} />
                             <Box className={style.description}>
                                 {row.title}
                                 <span>1 kg</span>

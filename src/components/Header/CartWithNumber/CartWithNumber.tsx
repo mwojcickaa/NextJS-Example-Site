@@ -6,7 +6,7 @@ import style from './CartWithNumber.module.sass'
 
 export default function CartWithNumber() {
     const countQuantity = useStoreSelector((state) =>
-        countQuantityInShopCartItems(state.shopCart))
+        countQuantityInShopCartItems(state.cartItems))
 
     return (
         <Box className={style.box}>

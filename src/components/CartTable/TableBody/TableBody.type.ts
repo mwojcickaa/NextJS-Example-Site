@@ -10,3 +10,8 @@ type CombinedShopCartItems = {
     preview: string
     quantity: number
 }
+
+type TableBodyProps = {
+    rows: Array<CombinedShopCartItems>
+    handleOnClick: (id: number) => void
+}

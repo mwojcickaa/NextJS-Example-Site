@@ -3,8 +3,9 @@ import { Box, Grid, Link } from '@mui/material'
 import Image from "@/components/Image/Image"
 import style from './Footer.module.sass'
 
-export default function Footer() {
+export default function Footer(props: FooterProps) {
     const currentYear = new Date().getFullYear()
+    const { logoAlt, logoSrc } = props
 
     return (
         <Grid
@@ -13,8 +14,8 @@ export default function Footer() {
             className={style.grid}
         >
             <Image
-                alt="Company logo in footer"
-                src="/logo.png"
+                alt={logoAlt}
+                src={logoSrc}
             />
             <Box
                 className={style.vertical_line}

@@ -11,14 +11,23 @@ export default function Home() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Header />
+        <Header
+          logoAlt="Company logo in header"
+          logoSrc="/logo.png"
+        />
+
         <main className={style.main}>
-          <Banner />
+          <Banner
+            alt="Banner image. Three spoons with spices"
+            src="/banner.jpg" />
           <br />
           <ShopGallery />
         </main>
-        <Footer />
+
+        <Footer
+          logoAlt="Company logo in footer"
+          logoSrc="/logo.png" />
       </PersistGate>
-    </Provider>
+    </Provider >
   )
 }

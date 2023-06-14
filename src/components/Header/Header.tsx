@@ -5,11 +5,14 @@ import useRouterHref from "@/hooks/useRouterHref"
 import CartWithNumber from "./CartWithNumber/CartWithNumber"
 import style from './Header.module.sass'
 
-export default function Header() {
+export default function Header(props: HeaderProps) {
+    const isHomePage = useRouterHref("/")
+    const isCartPage = useRouterHref("/cart")
+    console.log(props.logoSrc)
     const LogoImage = () => (
         <Image
-            alt="Company logo in header"
-            src="/logo.png"
+            alt={props.logoAlt}
+            src={props.logoSrc}
         />
     )
 
@@ -20,7 +23,7 @@ export default function Header() {
             className={style.grid}
         >
             {
-                useRouterHref("/")
+                isHomePage
                     ?
                     <LogoImage />
                     :
@@ -32,7 +35,7 @@ export default function Header() {
                     </Link>
             }
             {
-                useRouterHref("/cart")
+                isCartPage
                     ?
                     <CartWithNumber />
                     :
