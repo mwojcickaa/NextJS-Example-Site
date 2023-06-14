@@ -4,7 +4,7 @@ import style from './OrderPanel.module.sass'
 
 export default function OrderPanel() {
     return (
-        <Box className={style.grid}>
+        <Box className={style.box}>
             <Typography
                 className={style.tittle}
                 variant="h2"

@@ -16,7 +16,7 @@ export default function Cart() {
                     logoAlt="Company logo in header"
                     logoSrc="/logo.png"
                 />
-                <main>
+                <main className={style.main}>
                     <Typography
                         variant="h1"
                         className={style.order_title}

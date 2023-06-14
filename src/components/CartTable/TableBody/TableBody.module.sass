@@ -1,57 +1,60 @@
 @import "@/styles/variables"
 
-.row
-    border-bottom: 2px solid rgba($border-shadow-color, 0.2)
-    text-align: center
-    font-weight: 600
-    font-size: 14px
-    color: rgba($border-shadow-color, 0.7)
-    padding: 5px
-
-    svg
-        color: rgba($border-shadow-color, 0.7)
-        cursor: pointer
-
-        &:hover,
-        &:active
-            color: rgba($border-shadow-color, 0.9)
-
-    &.left
+table
+    .row
         border-bottom: 2px solid rgba($border-shadow-color, 0.2)
-
-        .product
-            display: flex
-            align-items: center
-            gap: 30px
-            color: rgba($border-shadow-color, 0.8)
-
-            img
-                width: 90px
-
-        .description
-            display: flex
-            flex-direction: column
-            align-items: flex-start
-            gap: 5px
-
-            span
-                font-weight: 500
-                font-size: 12px
-
-@media (max-width: 717px)
-    .row
-        &.left
-            .description
-                text-align: left
-            .product
-                gap: 0px
-                img
-                    display: none
-
-@media (max-width: 576px)
-    .row
-        font-size: 12px
+        text-align: center
+        font-weight: 600
+        font-size: 14px
+        color: rgba($border-shadow-color, 0.7)
+        padding: 5px
 
         svg
-            font-size: 20px
-            margin-top: 4px
+            color: rgba($border-shadow-color, 0.7)
+            cursor: pointer
+
+            &:hover,
+            &:active
+                color: rgba($border-shadow-color, 0.9)
+
+        &.left
+            border-bottom: 2px solid rgba($border-shadow-color, 0.2)
+
+            .product
+                display: flex
+                align-items: center
+                gap: 30px
+                color: rgba($border-shadow-color, 0.8)
+
+                img
+                    width: 90px
+
+            .description
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                gap: 5px
+
+                span
+                    font-weight: 500
+                    font-size: 12px
+
+@media (max-width: 717px)
+    table
+        .row
+            &.left
+                .description
+                    text-align: left
+                .product
+                    gap: 0px
+                    img
+                        display: none
+
+@media (max-width: 576px)
+    table
+        .row
+            font-size: 12px
+
+            svg
+                font-size: 20px
+                margin-top: 4px
