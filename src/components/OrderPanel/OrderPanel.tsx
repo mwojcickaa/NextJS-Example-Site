@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material"
+import { toast } from "react-toastify"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import style from './OrderPanel.module.sass'
 import { useStoreSelector } from "@/hooks/useStore"
@@ -12,6 +13,7 @@ export default function OrderPanel() {
     const fullPrice = getFullPrice(cartItems, shopItems)
     const normalizedPrice = normalizePrice(fullPrice)
     const normalizedDeliveryPrice = normalizePrice(fullPrice + 20)
+    const notify = () => toast.warn("Obecnie niedostępne");
 
     return (
         <Box className={style.box}>
@@ -31,7 +33,10 @@ export default function OrderPanel() {
                     Opłata za wysyłkę
                     <span>20,00 zł</span>
                 </Box>
-                <Box className={style.code}>
+                <Box
+                    className={style.code}
+                    onClick={notify}
+                >
                     Dodaj kod promocyjny
                     <ArrowForwardIcon />
                 </Box>

@@ -1,11 +1,14 @@
 import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/integration/react"
+import { ToastContainer } from "react-toastify"
 import { store, persistor } from '@/store/store'
 import Header from "@/components/Header/Header"
 import Banner from "@/components/Banner/Banner"
 import ShopGallery from "@/components/ShopGallery/ShopGallery"
 import Footer from "@/components/Footer/Footer"
+import 'react-toastify/dist/ReactToastify.css'
 import style from "./index.module.sass"
+
 
 export default function Home() {
   return (
@@ -26,7 +29,21 @@ export default function Home() {
 
         <Footer
           logoAlt="Company logo in footer"
-          logoSrc="/logo.png" />
+          logoSrc="/logo.png"
+        />
+
+        <ToastContainer
+          position="top-left"
+          autoClose={1750}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable
+          pauseOnHover={false}
+          theme="light"
+        />
       </PersistGate>
     </Provider >
   )
