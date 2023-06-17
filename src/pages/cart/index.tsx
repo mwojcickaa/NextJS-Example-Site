@@ -24,7 +24,7 @@ export default function Cart() {
                         variant="h1"
                         className={style.order_title}
                     >
-                        Twój koszyk
+                        Your Cart
                     </Typography>
                     <Box className={style.order_panel}>
                         <CartTable />

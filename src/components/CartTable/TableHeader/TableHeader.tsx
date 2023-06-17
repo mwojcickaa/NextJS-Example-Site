@@ -11,11 +11,11 @@ export default function TableHeader() {
                 <TableCell
                     className={`${style.header} ${style.left}`}
                 >
-                    Produkt
+                    Product
                 </TableCell>
-                <TableCell className={style.header}>Cena</TableCell>
-                <TableCell className={style.header}>Ilość</TableCell>
-                <TableCell className={style.header}>Cena końcowa</TableCell>
+                <TableCell className={style.header}>Price</TableCell>
+                <TableCell className={style.header}>Quantity</TableCell>
+                <TableCell className={style.header}>Total</TableCell>
                 <TableCell className={style.header}></TableCell>
             </TableRow>
         </TableHead>

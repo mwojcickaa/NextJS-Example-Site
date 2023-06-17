@@ -13,7 +13,7 @@ export default function OrderPanel() {
     const fullPrice = getFullPrice(cartItems, shopItems)
     const normalizedPrice = normalizePrice(fullPrice)
     const normalizedDeliveryPrice = normalizePrice(fullPrice + 20)
-    const notify = () => toast.warn("Obecnie niedostępne");
+    const notify = () => toast.warn("Currently unavailable");
 
     return (
         <Box className={style.box}>
@@ -21,32 +21,36 @@ export default function OrderPanel() {
                 className={style.tittle}
                 variant="h2"
             >
-                Twoje zamówienie
+                Order Summary
             </Typography>
             <Box className={style.description}>
                 <Box
                     className={style.quantity}>
-                    Kwota
-                    <span>{normalizedPrice} zł</span>
+                    Subtotal
+                    <span>${normalizedPrice}</span>
                 </Box>
                 <Box className={style.shipment}>
-                    Opłata za wysyłkę
-                    <span>20,00 zł</span>
+                    Shipping
+                    <span>$20,00</span>
                 </Box>
                 <Box
                     className={style.code}
                     onClick={notify}
                 >
-                    Dodaj kod promocyjny
+                    Add coupon code
                     <ArrowForwardIcon />
                 </Box>
             </Box>
             <Box
                 className={style.total}>
-                Łącznie
-                <span>{normalizedDeliveryPrice}</span>
+                Total
+                <span>${normalizedDeliveryPrice}</span>
             </Box>
-            <button>Zapłać</button>
+            <button
+                onClick={notify}
+            >
+                Buy
+            </button>
         </Box >
     )
 }

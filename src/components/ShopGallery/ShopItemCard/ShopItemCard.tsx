@@ -52,7 +52,7 @@ export default function ShopItemCard(props: ShopItemCardProps) {
                     color="text.secondary"
                     className={style.price}
                 >
-                    {props.price} zł
+                    ${props.price}
                 </Typography>
             </CardContent>
             <CardActions>
@@ -65,7 +65,7 @@ export default function ShopItemCard(props: ShopItemCardProps) {
                             color="text.secondary"
                             className={style.sold_out}
                         >
-                            Chwilowo wyprzedane
+                            Temporarily sold out
                         </Typography>
                         :
                         <CardActionItems

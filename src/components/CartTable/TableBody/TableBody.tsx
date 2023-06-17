@@ -37,9 +37,9 @@ export default function TableBody(props: TableBodyProps) {
                                 </Box>
                             </Box>
                         </TableCell>
-                        <CustomTableCell text={`${normalizedPrice} zł`} />
+                        <CustomTableCell text={`$${normalizedPrice}`} />
                         <CustomTableCell text={row.quantity} />
-                        <CustomTableCell text={`${normalizedFullPrice} zł`} />
+                        <CustomTableCell text={`$${normalizedFullPrice}`} />
                         <TableCell className={`${style.row}`}>
                             <CancelIcon
                                 onClick={() => handleOnClick(row.id)}

@@ -1,57 +1,57 @@
 [
     {
         "id": 1,
-        "title": "Kmin rzymski",
-        "description": "Niezwykły aromat doskonale dopełnia smak i zapach dań mięsnych i wegetariańskich",
-        "price": 49.99,
+        "title": "Cumin",
+        "description": "The unusual aroma perfectly complements the taste and smell of meat and vegetarian dishes",
+        "price": 11.59,
         "quantityAvailable": 11,
         "preview": "/shop/CuminSeeds.png"
     },
     {
         "id": 2,
-        "title": "Kolendra siewna",
-        "description": "Kolendra jest przyprawą mającą bardzo szerokie zastosowanie kulinarne",
-        "price": 33.65,
+        "title": "Coriander",
+        "description": "Is a spice with a very wide culinary application",
+        "price": 8.50,
         "quantityAvailable": 3,
         "preview": "/shop/CorianderSeeds.png"
     },
     {
         "id": 3,
-        "title": "Koper włoski",
-        "description": "Popularna przyprawa szczególnie w Indiach i basenie Morza Śródziemnego",
+        "title": "Fennel",
+        "description": "The unusual aroma perfectly complements the taste and smell of meat and vegetarian dishes",
         "price": 23.45,
         "quantityAvailable": 5,
-        "preview": "/shop/FenneSeeds.png"
+        "preview": "/shop/FennelSeeds.png"
     },
     {
         "id": 4,
-        "title": "Koper ogrodowy",
-        "description": "Nasiona nadają się doskonale jako dodatek do ciast, deserów, sałatek, serów czy mięs",
-        "price": 39.89,
+        "title": "Dill",
+        "description": "Seeds are perfect as an addition to cakes, desserts, salads, cheeses or meats",
+        "price": 5.89,
         "quantityAvailable": 0,
         "preview": "/shop/DillSeeds.png"
     },
     {
         "id": 5,
-        "title": "Kozieradka pospolita",
-        "description": "Ziarna kozieradki podczas mielenia uwydatniają niesamowity smak i aromat",
-        "price": 14.89,
+        "title": "Fenugreek",
+        "description": "Fenugreek grains during grinding enhance the amazing taste and aroma",
+        "price": 5.00,
         "quantityAvailable": 2,
         "preview": "/shop/FenugreekSeeds.png"
     },
     {
         "id": 6,
-        "title": "Gorczyca brązowa",
-        "description": "Po zmieleniu będzie stanowić składnik curry. Zamarynowana okaże się piękną ozdobą potrawy",
-        "price": 37.19,
+        "title": "Brown mustard",
+        "description": "After grinding, it will be an ingredient in curry. Marinated will turn out to be a beautiful decoration of the dish",
+        "price": 8.95,
         "quantityAvailable": 4,
         "preview": "/shop/MustardSeeds.png"
     },
     {
         "id": 7,
-        "title": "Sezam indyjski",
-        "description": "Ziarenka sezamu, nazywane także kunżutem, to powszechny i wszechstronny dodatek w kuchni",
-        "price": 29.99,
+        "title": "Indian sesame",
+        "description": "Sesame seeds, also called kunżut, are a common and versatile addition in the kitchen",
+        "price": 7.35,
         "quantityAvailable": 30,
         "preview": "/shop/SesameSeeds.png"
     }

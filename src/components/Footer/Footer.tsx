@@ -8,7 +8,7 @@ import style from './Footer.module.sass'
 export default function Footer(props: FooterProps) {
     const currentYear = new Date().getFullYear()
     const { logoAlt, logoSrc } = props
-    const notify = () => toast.warn("Obecnie niedostępne");
+    const notify = () => toast.warn("Currently unavailable");
 
     return (
         <Grid
@@ -27,10 +27,10 @@ export default function Footer(props: FooterProps) {
                 <Box
                     component="nav"
                 >
-                    <Link onClick={notify}>O nas</Link>
-                    <Link onClick={notify}>Regulamin</Link>
-                    <Link onClick={notify}>Prywatność</Link>
-                    <Link onClick={notify}>Reklamacje</Link>
+                    <Link onClick={notify}>About</Link>
+                    <Link onClick={notify}>Statute</Link>
+                    <Link onClick={notify}>Privacy</Link>
+                    <Link onClick={notify}>Complaints</Link>
                 </Box>
                 <Box
                     className={style.company}
