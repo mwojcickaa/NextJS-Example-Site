@@ -31,7 +31,7 @@ export default function OrderPanel() {
                 </Box>
                 <Box className={style.shipment}>
                     Shipping
-                    <span>$20,00</span>
+                    <span>$10,00</span>
                 </Box>
                 <Box
                     className={style.code}

@@ -23,7 +23,7 @@ export default function Home() {
           <Banner
             alt="Banner image. Three spoons with spices"
             src="/banner.jpg" />
-          <br />
+
           <ShopGallery />
         </main>
 

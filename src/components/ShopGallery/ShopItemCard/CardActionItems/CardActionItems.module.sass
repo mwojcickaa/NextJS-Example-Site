@@ -8,7 +8,11 @@
         color: $white-color
 
         &:hover
-            background-color: $complement-color
+            background-color: rgba($complement-color, 0.9)
+
+        &:disabled
+            color: $background-color
+            background-color: rgba($complement-color, 0.6)
 
     .select
         margin-right: 10px

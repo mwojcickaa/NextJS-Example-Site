@@ -42,7 +42,7 @@ export default function CardActionItems(props: CardActionItemsProps) {
                 size="medium"
                 disabled={disableButton}
             >
-                Dodaj
+                Add
             </Button>
         </Box>
     )

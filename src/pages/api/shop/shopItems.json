@@ -3,7 +3,7 @@
         "id": 1,
         "title": "Cumin",
         "description": "The unusual aroma perfectly complements the taste and smell of meat and vegetarian dishes",
-        "price": 11.59,
+        "price": 9.59,
         "quantityAvailable": 11,
         "preview": "/shop/CuminSeeds.png"
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "title": "Coriander",
         "description": "Is a spice with a very wide culinary application",
-        "price": 8.50,
+        "price": 8.49,
         "quantityAvailable": 3,
         "preview": "/shop/CorianderSeeds.png"
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "title": "Fennel",
         "description": "The unusual aroma perfectly complements the taste and smell of meat and vegetarian dishes",
-        "price": 23.45,
+        "price": 5.74,
         "quantityAvailable": 5,
         "preview": "/shop/FennelSeeds.png"
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "title": "Fenugreek",
         "description": "Fenugreek grains during grinding enhance the amazing taste and aroma",
-        "price": 5.00,
+        "price": 4.99,
         "quantityAvailable": 2,
         "preview": "/shop/FenugreekSeeds.png"
     },

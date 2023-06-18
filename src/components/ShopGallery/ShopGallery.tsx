@@ -8,7 +8,6 @@ import style from './ShopGallery.module.sass'
 
 export default function ShopGallery() {
     const shopItems = useStoreSelector(state => state.shopItems.items)
-    console.log("shopItems", shopItems)
     const dispatch = useStoreDispatch()
 
     useEffect(() => {

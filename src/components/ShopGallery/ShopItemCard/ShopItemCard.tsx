@@ -9,6 +9,7 @@ import { add } from '@/reducers/shopCartReducer'
 import style from "./ShopItemCard.module.sass"
 import CardActionItems from "./CardActionItems/CardActionItems"
 import { getSelectedItem } from "@/selectors/shopCartSelector"
+import { normalizePrice } from "@/functions/price"
 
 
 export default function ShopItemCard(props: ShopItemCardProps) {
@@ -52,7 +53,7 @@ export default function ShopItemCard(props: ShopItemCardProps) {
                     color="text.secondary"
                     className={style.price}
                 >
-                    ${props.price}
+                    ${normalizePrice(props.price)}
                 </Typography>
             </CardContent>
             <CardActions>

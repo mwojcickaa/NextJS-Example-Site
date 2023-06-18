@@ -8,7 +8,7 @@ import style from './Header.module.sass'
 export default function Header(props: HeaderProps) {
     const isHomePage = useRouterHref("/")
     const isCartPage = useRouterHref("/cart")
-    console.log(props.logoSrc)
+
     const LogoImage = () => (
         <Image
             alt={props.logoAlt}
