@@ -1,13 +1,14 @@
 @import "@/styles/variables"
 
 .main
-    margin: 0 20px
-    background: white
+    padding: 0 20px
+    background: $background-color
+    height: calc( 100vh - 85px )
 
     .order_title
         text-align: center
         font-size: 45px
-        margin: 30px 0px 30px 0px
+        padding: 30px 0px 30px 0px
         color: rgba($border-shadow-color, 0.8)
         font-weight: 700
         letter-spacing: 3px
@@ -32,5 +33,7 @@
 
 @media (max-width: 576px)
     .main
+        height: calc( 100vh - 65px )
+
         .order_title
             font-size: 30px

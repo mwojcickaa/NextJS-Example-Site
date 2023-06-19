@@ -2,7 +2,9 @@
 
 .main
     padding: 30px 10% 10px 10%
+    box-sizing: border-box
     background: $background-color
+    min-height: calc( 100vh - 85px)
 
 @media (max-width: 1850px)
     .main
@@ -19,3 +21,7 @@
 @media (max-width: 1130px)
     .main
         padding: 30px 5%
+
+@media (max-width: 576px)
+    .main
+        height: calc( 100vh - 65px )

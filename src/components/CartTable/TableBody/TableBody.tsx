@@ -18,36 +18,46 @@ export default function TableBody(props: TableBodyProps) {
 
     return (
         <MuiTableBody>
-            {rows.map((row) => {
-                const normalizedPrice = normalizePrice(row.price)
-                const normalizedFullPrice = normalizePrice(row.price * row.quantity)
-
-                return (
-                    <TableRow
-                        key={row.id}
-                    >
-                        <TableCell className={`${style.row} ${style.left}`}>
-                            <Box className={style.product}>
-                                <Image
-                                    src={row.preview}
-                                    alt={row.title} />
-                                <Box className={style.description}>
-                                    {row.title}
-                                    <span>1 kg</span>
-                                </Box>
-                            </Box>
-                        </TableCell>
-                        <CustomTableCell text={`$${normalizedPrice}`} />
-                        <CustomTableCell text={row.quantity} />
-                        <CustomTableCell text={`$${normalizedFullPrice}`} />
-                        <TableCell className={`${style.row}`}>
-                            <CancelIcon
-                                onClick={() => handleOnClick(row.id)}
-                            />
+            {
+                rows.length === 0
+                    ? <TableRow>
+                        <TableCell
+                            colSpan={6}
+                            className={style.empty}
+                        >
+                            No selected items
                         </TableCell>
                     </TableRow>
-                )
-            })}
+                    : rows.map((row) => {
+                        const normalizedPrice = normalizePrice(row.price)
+                        const normalizedFullPrice = normalizePrice(row.price * row.quantity)
+
+                        return (
+                            <TableRow
+                                key={row.id}
+                            >
+                                <TableCell className={`${style.row} ${style.left}`}>
+                                    <Box className={style.product}>
+                                        <Image
+                                            src={row.preview}
+                                            alt={row.title} />
+                                        <Box className={style.description}>
+                                            {row.title}
+                                            <span>1 kg</span>
+                                        </Box>
+                                    </Box>
+                                </TableCell>
+                                <CustomTableCell text={`$${normalizedPrice}`} />
+                                <CustomTableCell text={row.quantity} />
+                                <CustomTableCell text={`$${normalizedFullPrice}`} />
+                                <TableCell className={`${style.row}`}>
+                                    <CancelIcon
+                                        onClick={() => handleOnClick(row.id)}
+                                    />
+                                </TableCell>
+                            </TableRow>
+                        )
+                    })}
         </MuiTableBody>
     )
 }

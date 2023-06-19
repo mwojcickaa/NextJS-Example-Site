@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Grid } from '@mui/material'
+import { CircularProgress, Grid } from '@mui/material'
 import { useStoreSelector, useStoreDispatch } from '@/hooks/useStore'
 import { add } from '@/reducers/shopItemsReducer'
 import ShopItemCard from './ShopItemCard/ShopItemCard'
@@ -22,17 +22,22 @@ export default function ShopGallery() {
     return (
         <Grid className={style.grid}>
             {
-                shopItems.map((item) => (
-                    <ShopItemCard
-                        key={item.id}
-                        id={item.id}
-                        title={item.title}
-                        description={item.description}
-                        price={Number(item.price)}
-                        quantityAvailable={Number(item.quantityAvailable)}
-                        preview={item.preview}
-                    ></ShopItemCard>
-                ))
+                shopItems.length == 0
+                    ? <CircularProgress
+                        color="warning"
+                        className={style.progress}
+                    />
+                    : shopItems.map((item) => (
+                        <ShopItemCard
+                            key={item.id}
+                            id={item.id}
+                            title={item.title}
+                            description={item.description}
+                            price={Number(item.price)}
+                            quantityAvailable={Number(item.quantityAvailable)}
+                            preview={item.preview}
+                        ></ShopItemCard>
+                    ))
             }
         </Grid>
     )
