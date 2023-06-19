@@ -10,7 +10,7 @@
     {
         "id": 2,
         "title": "Coriander",
-        "description": "Is a spice with a very wide culinary application",
+        "description": "Easily ground but its flavour and aroma lasts substantially longer in the whole form.",
         "price": 8.49,
         "quantityAvailable": 3,
         "preview": "/shop/CorianderSeeds.png"
@@ -42,7 +42,7 @@
     {
         "id": 6,
         "title": "Brown mustard",
-        "description": "After grinding, it will be an ingredient in curry. Marinated will turn out to be a beautiful decoration of the dish",
+        "description": "Consumed in adequate amounts mustard antibacterial, it soothes inflammation of the bronchi.",
         "price": 8.95,
         "quantityAvailable": 4,
         "preview": "/shop/MustardSeeds.png"
