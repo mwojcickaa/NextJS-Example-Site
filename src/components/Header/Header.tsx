@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Grid } from "@mui/material"
-import Image from "@/components/Image/Image"
+import { Box, Grid } from "@mui/material"
+import Image from 'next/image'
 import useRouterHref from "@/hooks/useRouterHref"
 import CartWithNumber from "./CartWithNumber/CartWithNumber"
 import style from './Header.module.sass'
@@ -10,10 +10,14 @@ export default function Header(props: HeaderProps) {
     const isCartPage = useRouterHref("/cart")
 
     const LogoImage = () => (
-        <Image
-            alt={props.logoAlt}
-            src={props.logoSrc}
-        />
+        <Box className={style.img}>
+            <Image
+                fill
+                alt={props.logoAlt}
+                src={props.logoSrc}
+                priority={true}
+            />
+        </Box>
     )
 
     return (
@@ -29,7 +33,7 @@ export default function Header(props: HeaderProps) {
                     :
                     <Link
                         href="/"
-                        className={style.logo}
+                        className={style.link}
                     >
                         <LogoImage />
                     </Link>

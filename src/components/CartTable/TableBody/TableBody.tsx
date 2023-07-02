@@ -3,7 +3,7 @@ import TableCell from '@mui/material/TableCell'
 import TableRow from '@mui/material/TableRow'
 import CancelIcon from '@mui/icons-material/Cancel'
 import { Box } from '@mui/material'
-import Image from '@/components/Image/Image'
+import Image from 'next/image'
 import style from './TableBody.module.sass'
 import { normalizePrice } from "@/functions/price"
 
@@ -38,9 +38,12 @@ export default function TableBody(props: TableBodyProps) {
                             >
                                 <TableCell className={`${style.row} ${style.left}`}>
                                     <Box className={style.product}>
-                                        <Image
-                                            src={row.preview}
-                                            alt={row.title} />
+                                        <Box className={style.product_image}>
+                                            <Image
+                                                fill
+                                                src={row.preview}
+                                                alt={row.title} />
+                                        </Box>
                                         <Box className={style.description}>
                                             {row.title}
                                             <span>1 kg</span>

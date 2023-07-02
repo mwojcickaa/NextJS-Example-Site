@@ -12,7 +12,8 @@ export default function OrderPanel() {
     const shopItems = useStoreSelector((state) => state.shopItems)
     const fullPrice = getFullPrice(cartItems, shopItems)
     const normalizedPrice = normalizePrice(fullPrice)
-    const normalizedDeliveryPrice = normalizePrice(fullPrice + 20)
+    const normalizedDeliveryPrice = normalizePrice(fullPrice + 10)
+    const disabledButtonByt = fullPrice == 0 ? true : false
     const notify = () => toast.warn("Currently unavailable");
 
     return (
@@ -48,6 +49,7 @@ export default function OrderPanel() {
             </Box>
             <button
                 onClick={notify}
+                disabled={disabledButtonByt}
             >
                 Buy
             </button>

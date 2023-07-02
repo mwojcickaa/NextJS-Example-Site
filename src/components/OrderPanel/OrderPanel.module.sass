@@ -68,6 +68,14 @@
         letter-spacing: 1px
         cursor: pointer
 
+        &:disabled
+            background: rgba($border-shadow-color, 0.1)
+            color: rgba($border-shadow-color, 0.3)
+            cursor: default
+
+        &:hover
+            background-color: rgba($complement-color, 0.8)
+
 @media (max-width: 1060px)
     .box
         width: 100%

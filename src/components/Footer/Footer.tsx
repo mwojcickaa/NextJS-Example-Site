@@ -1,7 +1,7 @@
 import React from 'react'
 import { toast } from 'react-toastify'
 import { Box, Grid, Link } from '@mui/material'
-import Image from "@/components/Image/Image"
+import Image from 'next/image'
 import style from './Footer.module.sass'
 
 
@@ -16,10 +16,13 @@ export default function Footer(props: FooterProps) {
             container
             className={style.grid}
         >
-            <Image
-                alt={logoAlt}
-                src={logoSrc}
-            />
+            <Box className={style.img}>
+                <Image
+                    fill
+                    alt={props.logoAlt}
+                    src={props.logoSrc}
+                />
+            </Box>
             <Box
                 className={style.vertical_line}
             />
