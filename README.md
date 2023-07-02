@@ -40,3 +40,7 @@ Small web application writing in Next.js.
 `http://localhost:3000` - homepage (shop) <br>
 `http://localhost:3000/cart` - items cart <br>
 `http://localhost:3000/api/shop` - endpoint with items to shop
+
+
+## Environment Variable
+`CLARITY_KEY` - key for Microsoft Clarity
