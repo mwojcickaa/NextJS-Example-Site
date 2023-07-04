@@ -1,5 +1,5 @@
 namespace NodeJS {
     interface ProcessEnv {
-        CLARITY_KEY: string;
+        NEXT_PUBLIC_CLARITY_KEY: string;
     }
 }

@@ -6,7 +6,7 @@ import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    clarity.init(process.env.CLARITY_KEY)
+    clarity.init(process.env.NEXT_PUBLIC_CLARITY_KEY)
   }, [])
 
   return <>
