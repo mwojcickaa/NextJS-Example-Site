@@ -13,7 +13,7 @@ Small web application writing in Next.js.
 
 ## Installation and run
 
-1. Clone repository:
+1. Clone repository
     ```cmd
     git clone https://github.com/kryzasada/NextJS-Example-Site
     ```
@@ -43,4 +43,4 @@ Small web application writing in Next.js.
 
 
 ## Environment Variable
-`CLARITY_KEY` - key for Microsoft Clarity
+`NEXT_PUBLIC_CLARITY_KEY` - key for Microsoft Clarity
