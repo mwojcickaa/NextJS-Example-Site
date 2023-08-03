@@ -1,12 +1,11 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCartOutlined'
 import { Box } from "@mui/material"
 import { useStoreSelector } from '@/hooks/useStore'
-import { countQuantityInShopCartItems } from './CartWithNumber.function.ts'
 import style from './CartWithNumber.module.sass'
 
 export default function CartWithNumber() {
     const countQuantity = useStoreSelector((state) =>
-        countQuantityInShopCartItems(state.cartItems))
+    state.cartItems.selected.length)
 
     return (
         <Box className={style.box}>
@@ -19,3 +18,7 @@ export default function CartWithNumber() {
         </Box>
     )
 }
+
+
+
+
