@@ -8,6 +8,7 @@ import ShopGallery from "@/components/ShopGallery/ShopGallery"
 import Footer from "@/components/Footer/Footer"
 import 'react-toastify/dist/ReactToastify.css'
 import style from "./index.module.sass"
+import Head from 'next/head';
 
 
 export default function Home() {
@@ -48,3 +49,5 @@ export default function Home() {
     </Provider >
   )
 }
+
+
