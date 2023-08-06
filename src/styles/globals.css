@@ -2,11 +2,11 @@
   font-family: "Roboto", "Helvetica", "Arial", sans-serif !important
 }
 
+html {
+  overflow-y: scroll;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-}
-
-html {
-  overflow-y: scroll !important;
 }
