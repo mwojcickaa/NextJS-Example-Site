@@ -9,7 +9,6 @@ import Footer from "@/components/Footer/Footer"
 import 'react-toastify/dist/ReactToastify.css'
 import style from "./index.module.sass"
 
-
 export default function Home() {
   return (
     <Provider store={store}>

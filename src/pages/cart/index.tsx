@@ -37,7 +37,7 @@ export default function Cart() {
                     autoClose={1750}
                     hideProgressBar
                     newestOnTop={false}
-                    closeOnClick
+                    closeOnClick={false}
                     rtl={false}
                     pauseOnFocusLoss={false}
                     draggable
