@@ -1,5 +1,5 @@
-import React from 'react'
-import { toast } from 'react-toastify'
+import React, { useRef } from 'react'
+import { Id, toast } from 'react-toastify'
 import { Box, Grid, Link } from '@mui/material'
 import Image from 'next/image'
 import style from './Footer.module.sass'
@@ -7,8 +7,12 @@ import style from './Footer.module.sass'
 
 export default function Footer(props: FooterProps) {
     const currentYear = new Date().getFullYear()
-    const { logoAlt, logoSrc } = props
-    const notify = () => toast.warn("Currently unavailable");
+    const toastId = useRef<Id>()
+
+    const notify = () => {
+        toast.dismiss(toastId.current)
+        toastId.current = toast.warn("Currently unavailable")
+    }
 
     return (
         <Grid

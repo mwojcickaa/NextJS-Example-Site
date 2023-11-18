@@ -1,5 +1,6 @@
+import { useRef } from "react"
 import { Box, Typography } from "@mui/material"
-import { toast } from "react-toastify"
+import { Id, toast } from "react-toastify"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import style from './OrderPanel.module.sass'
 import { useStoreSelector } from "@/hooks/useStore"
@@ -14,7 +15,12 @@ export default function OrderPanel() {
     const normalizedPrice = normalizePrice(fullPrice)
     const normalizedDeliveryPrice = normalizePrice(fullPrice + 10)
     const disabledButtonByt = fullPrice == 0 ? true : false
-    const notify = () => toast.warn("Currently unavailable");
+    const toastId = useRef<Id>()
+
+    const notify = () => {
+        toast.dismiss(toastId.current)
+        toastId.current = toast.warn("Currently unavailable")
+    }
 
     return (
         <Box className={style.box}>
