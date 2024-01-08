@@ -34,11 +34,11 @@ export default function OrderPanel() {
                 <Box
                     className={style.quantity}>
                     Subtotal
-                    <span>${normalizedPrice}</span>
+                    <span>€{normalizedPrice}</span>
                 </Box>
                 <Box className={style.shipment}>
                     Shipping
-                    <span>$10,00</span>
+                    <span>€10,00</span>
                 </Box>
                 <Box
                     className={style.code}
@@ -51,7 +51,7 @@ export default function OrderPanel() {
             <Box
                 className={style.total}>
                 Total
-                <span>${normalizedDeliveryPrice}</span>
+                <span>€{normalizedDeliveryPrice}</span>
             </Box>
             <button
                 onClick={notify}

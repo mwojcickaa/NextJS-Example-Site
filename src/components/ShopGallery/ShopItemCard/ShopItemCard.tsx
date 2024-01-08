@@ -53,7 +53,7 @@ export default function ShopItemCard(props: ShopItemCardProps) {
                     color="text.secondary"
                     className={style.price}
                 >
-                    ${normalizePrice(props.price)}
+                    €{normalizePrice(props.price)}
                 </Typography>
             </CardContent>
             <CardActions>

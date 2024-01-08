@@ -20,7 +20,6 @@ export default function CardActionItems(props: CardActionItemsProps) {
                     onChange={e => setQuantity(Number(e.target.value))}
                     label="quantity"
                 >
-                    <ListSubheader>Kg</ListSubheader>
                     {
                         [...Array(5)].map((_, i) => {
                             let disabled = quantityAvailable > i + 1 ? false : true

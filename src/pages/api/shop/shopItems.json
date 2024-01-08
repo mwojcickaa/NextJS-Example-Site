@@ -1,58 +1,58 @@
 [
     {
         "id": 1,
-        "title": "Cumin",
-        "description": "The unusual aroma perfectly complements the taste and smell of meat and vegetarian dishes",
-        "price": 9.59,
-        "quantityAvailable": 11,
-        "preview": "/shop/CuminSeeds.png"
+        "title": "Winter Set - Green",
+        "price": 295,
+        "quantityAvailable": 5,
+        "preview": "/shop/1_zestaw.jpg"
     },
     {
         "id": 2,
-        "title": "Coriander",
-        "description": "Easily ground but its flavour and aroma lasts substantially longer in the whole form.",
-        "price": 8.49,
-        "quantityAvailable": 3,
-        "preview": "/shop/CorianderSeeds.png"
+        "title": "Winter Set - Beige",
+        "price": 295,
+        "quantityAvailable": 5,
+        "preview": "/shop/2_zestaw.jpg"
     },
     {
         "id": 3,
-        "title": "Fennel",
-        "description": "The unusual aroma perfectly complements the taste and smell of meat and vegetarian dishes",
-        "price": 5.74,
+        "title": "Winter Set - Blue",
+        "price": 295,
         "quantityAvailable": 5,
-        "preview": "/shop/FennelSeeds.png"
+        "preview": "/shop/3_zestaw.jpg"
     },
     {
         "id": 4,
-        "title": "Dill",
-        "description": "Seeds are perfect as an addition to cakes, desserts, salads, cheeses or meats",
-        "price": 5.89,
-        "quantityAvailable": 0,
-        "preview": "/shop/DillSeeds.png"
+        "title": "Winter Set-  White",
+        "price": 295,
+        "quantityAvailable": 5,
+        "preview": "/shop/4_zestaw.jpg"
     },
     {
         "id": 5,
-        "title": "Fenugreek",
-        "description": "Fenugreek grains during grinding enhance the amazing taste and aroma",
-        "price": 4.99,
-        "quantityAvailable": 2,
-        "preview": "/shop/FenugreekSeeds.png"
+        "title": "Winter Set - Brown",
+        "price": 295,
+        "quantityAvailable": 5,
+        "preview": "/shop/5_zestaw.jpg"
     },
     {
         "id": 6,
-        "title": "Brown mustard",
-        "description": "Consumed in adequate amounts mustard antibacterial, it soothes inflammation of the bronchi.",
-        "price": 8.95,
-        "quantityAvailable": 4,
-        "preview": "/shop/MustardSeeds.png"
+        "title": "Winter Set - Dark Blue",
+        "price": 295,
+        "quantityAvailable": 5,
+        "preview": "/shop/6_zestaw.jpg"
     },
     {
         "id": 7,
-        "title": "Indian sesame",
-        "description": "Sesame seeds, also called kunżut, are a common and versatile addition in the kitchen",
-        "price": 7.35,
-        "quantityAvailable": 30,
-        "preview": "/shop/SesameSeeds.png"
+        "title": "Winter Set - Gray",
+        "price": 295,
+        "quantityAvailable": 5,
+        "preview": "/shop/7_zestaw.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Winter Set - Black",
+        "price": 295,
+        "quantityAvailable": 5,
+        "preview": "/shop/8_zestaw.jpg"
     }
 ]

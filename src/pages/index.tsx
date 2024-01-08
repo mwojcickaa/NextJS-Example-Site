@@ -3,7 +3,6 @@ import { PersistGate } from "redux-persist/integration/react"
 import { ToastContainer } from "react-toastify"
 import { store, persistor } from '@/store/store'
 import Header from "@/components/Header/Header"
-import Banner from "@/components/Banner/Banner"
 import ShopGallery from "@/components/ShopGallery/ShopGallery"
 import Footer from "@/components/Footer/Footer"
 import 'react-toastify/dist/ReactToastify.css'
@@ -19,9 +18,6 @@ export default function Home() {
         />
 
         <main className={style.main}>
-          <Banner
-            alt="Banner image. Three spoons with spices"
-            src="/banner.jpg" />
 
           <ShopGallery />
         </main>
